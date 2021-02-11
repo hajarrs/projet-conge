@@ -24,8 +24,9 @@
 	<div class="title1-center">
 		<p class="title1">Gestion des employés</p>
     <div class="container"></div>
-		 <button class="btn btn-outline-light">Liste des employés</button>
+		 <a  [routerLink]="['/employes']" routerLinkActive="active" class="btn btn-outline-light">Liste des employés</a>
      <button class="btn btn-outline-light">Liste des managers</button>
     </div>
+    <router-outlet></router-outlet>
 </body>
 

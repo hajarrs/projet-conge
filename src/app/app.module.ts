@@ -1,20 +1,28 @@
+import { routes } from './routes';
+import { RouterModule } from '@angular/router';
+import { EmployeListComponent } from './employes/employe-list/employe-list.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListEmployersComponent } from './model/list-employers/list-employers.component';
-import { ListEmployerComponent } from './list-employer/list-employer.component';
+import { EmployeRowComponent } from './employes/employe-row/employe-row.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListEmployersComponent,
-    ListEmployerComponent
+    EmployeListComponent,
+    EmployeRowComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

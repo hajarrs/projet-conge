@@ -1,13 +1,14 @@
+import { Utilisateur } from './../../model/utilisateur';
+import { EmployerService } from './../../service/employer.service';
 import { Component, OnInit } from '@angular/core';
-import { Utilisateur } from '../model/utilisateur';
-import { EmployerService } from '../service/employer.service';
 
 @Component({
-  selector: 'app-list-employer',
-  templateUrl: './list-employer.component.html',
-  styleUrls: ['./list-employer.component.css']
+  selector: 'app-employe-list',
+  templateUrl: './employe-list.component.html',
+  styleUrls: ['./employe-list.component.css']
 })
-export class ListEmployerComponent implements OnInit {
+export class EmployeListComponent implements OnInit {
+
 
   employers: Utilisateur[] = [];
   showNew: boolean = false;
@@ -46,3 +47,4 @@ export class ListEmployerComponent implements OnInit {
 
 
 }
+

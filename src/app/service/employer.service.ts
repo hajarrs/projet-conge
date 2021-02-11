@@ -8,19 +8,16 @@ import { Utilisateur } from '../model/utilisateur';
 })
 export class EmployerService {
 
-  private url: string ='http://localhost:8080/conge/employes';
+private httpHeaders: HttpHeaders;
 
-  private httpHeaders: HttpHeaders;
-
-
+private url: string = 'http://localhost:8080/conge/employes';
 
   constructor(private http: HttpClient) {
     this.httpHeaders = new HttpHeaders({
-      'Content-Type': 'application/json',
-      //Authorization: 'Basic ' + sessionStorage.getItem('tokenId'),
+      'content-type': 'application/json',
+      Authorization: 'Basic ' + btoa('hajar@gmail.com:hajar'),
     });
-
-   }
+  }
 
    public allEmployer(): Observable<Utilisateur[]> {
     return this.http.get<Utilisateur[]>(this.url, { headers: this.httpHeaders });
@@ -45,9 +42,7 @@ export class EmployerService {
       password: utilisateur.mail,
       nom: utilisateur.nom,
       prenom: utilisateur.prenom,
-     // role: utilisateur.role,
       id_manager: utilisateur.id_manager,
-      
     };
     return this.http.post<Utilisateur>(this.url, o, { headers: this.httpHeaders });
   }
