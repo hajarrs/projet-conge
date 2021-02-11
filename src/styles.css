@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.login-form {
+  text-align: center;
+}
+
+body {
+  background-color: #337ab7;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 35px;
+}
+
+.en-tete {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  padding-left: 13px;
+  padding-top: 13px;
+}
+.title1 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+.title1-center {
+  background-color: #1d5586;
+  width: 50%;
+  padding: 0% 0 0;
+  margin: auto;
+}
