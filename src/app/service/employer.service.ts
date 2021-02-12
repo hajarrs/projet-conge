@@ -10,12 +10,12 @@ export class EmployerService {
 
 private httpHeaders: HttpHeaders;
 
-private url: string = 'http://localhost:8080/conge/employes';
+private url: string = 'http://localhost:8080/conge/api/employes';
 
   constructor(private http: HttpClient) {
     this.httpHeaders = new HttpHeaders({
       'content-type': 'application/json',
-      Authorization: 'Basic ' + btoa('hajar@gmail.com:hajar'),
+      Authorization: 'Basic' + btoa('hajar@gmail.com:hajar'),
     });
   }
 
