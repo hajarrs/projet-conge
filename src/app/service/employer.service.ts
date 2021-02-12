@@ -15,7 +15,7 @@ private url: string = 'http://localhost:8080/conge/api/employes';
   constructor(private http: HttpClient) {
     this.httpHeaders = new HttpHeaders({
       'content-type': 'application/json',
-      Authorization: 'Basic' + btoa('hajar@gmail.com:hajar'),
+      Authorization: 'Basic ' + btoa('hajar@gmail.com:hajar'),
     });
   }
 
@@ -44,6 +44,6 @@ private url: string = 'http://localhost:8080/conge/api/employes';
       prenom: utilisateur.prenom,
       id_manager: utilisateur.id_manager,
     };
-    return this.http.post<Utilisateur>(this.url, o, { headers: this.httpHeaders });
+    return this.http.post<Utilisateur>(this.url+'/add', o, { headers: this.httpHeaders });
   }
 }

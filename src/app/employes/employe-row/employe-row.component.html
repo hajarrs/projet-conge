@@ -1,5 +1,6 @@
 <ng-container *ngIf="!edit; else formEdit">
   <td>{{ user.id }}</td>
+  <td>{{ user.mail }}</td>
   <td>{{ user.prenom }}</td>
   <td>{{ user.nom }}</td>
   <td>{{user.id_manager}}</td>
@@ -18,6 +19,7 @@
   <td><input [(ngModel)]="user.mail"></td>
   <td><input [(ngModel)]="user.prenom" /></td>
   <td><input [(ngModel)]="user.nom" /></td>
+  <td><input [(ngModel)]="user.id_manager"></td>
   <td>
     <button (click)="save()" class="btn btn-outline-success">
       enregistrer

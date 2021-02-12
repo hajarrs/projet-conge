@@ -1,5 +1,5 @@
 export class Utilisateur {
-  private _id: number;
+  private _id!: number;
   private _mail: string;
   private _password:string;
   private _nom:string;
@@ -8,8 +8,7 @@ export class Utilisateur {
 
 
 
-	constructor(id: number=0, mail: string ='', password: string='', nom: string='', prenom: string='', id_manager: number=0) {
-		this._id = id;
+	constructor(id?: number, mail: string ='', password: string='', nom: string='', prenom: string='', id_manager: number=0) {
 		this._mail = mail;
 		this._password = password;
 		this._nom = nom;
